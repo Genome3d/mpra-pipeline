@@ -1,0 +1,5 @@
+awk 'BEGIN {FS=OFS="\t"} {$1=$1"_"$2"_"$3} {gsub(/ /,"",$1)} {print $1,$4}' mpra_library_main.txt > mpra_library_for_fa.txt
+sed 's/\s*$//g' custom_fasta/mpra_library_fasta.fa > custom_fasta/mpra_library_noWSpace.fa
+bwa index -p bwa_index/mpra_lib_bwa_idx custom_fasta/mpra_library_noWSpace.fa
+bowtie2-build custom_fasta/mpra_library_noWSpace.fa bowtie2_index/mpra_lib_bowtie2_idx
+gzip -dc J87.R1.full.fastq.gz | awk 'NR%4==2{c++; l+=length($0)} END{print "Number of reads: "c; print "Number of bases in reads: "l}' #check no of reads and bases in fastq.gz file
