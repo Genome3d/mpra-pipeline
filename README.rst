@@ -1,7 +1,7 @@
 Massively parallel reporter assay (MPRA) data analysis pipeline
 ===============================================================
 
-This repository contain scripts used to analyse MPRA sequencing 
+This repository contains scripts used to analyse MPRA sequencing 
 data
      
 Requirements
@@ -17,7 +17,8 @@ Requirements
 Usage
 =====
 
-```
+::
+
 python mpra_pipeline.py -h
 
 usage: mpra_pipeline.py [-h] [-r1 READ1] [-r2 READ2] [-ds1 DNA_SEQ1 [DNA_SEQ1 ...]] [-ds2 DNA_SEQ2 [DNA_SEQ2 ...]] -o OUTDIR [-i INDEX_DIR] -m {enhancer,cdna,gdna}
@@ -43,5 +44,4 @@ optional arguments:
   -m {enhancer,cdna,gdna}, --mode {enhancer,cdna,gdna}
                         Choose a run mode to find the barcodes from enhancer, cDNA or gDNA sequences
 
-```
 
