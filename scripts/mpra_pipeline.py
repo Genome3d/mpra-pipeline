@@ -237,7 +237,7 @@ def find_dna_barcodes(seq1, seq2, outdir, mode):
     logger.write("\t20b barcodes found in {}/{} reads.".format(len(seq2_20bbc_out),
         len(seq2_df)))
     logger.write("\tWriting output files...")
-    seq2_full_ofile = seq1_fname+'_bc'+'.txt.gz'
+    seq2_full_ofile = seq2_fname+'_bc'+'.txt.gz'
     seq2_full_out.to_csv(os.path.join(outdir,seq2_full_ofile),
             sep="\t",
             header = True,
